@@ -6,12 +6,12 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
 
-// instantiate an express app
+
 const app = express();
-// cors
+
 app.use(cors({ origin: "*" }));
 
-app.use("/public", express.static(process.cwd() + "/public")); //make public static
+app.use("/public", express.static(process.cwd() + "/public")); 
 
 const transporter = nodemailer.createTransport({
   service: "hotmail",
@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// verify connection configuration
+// verification de la config de connexion
 transporter.verify(function (error, success) {
   if (error) {
     console.log(error);
@@ -56,13 +56,12 @@ app.post("/send", (req, res) => {
   });
 });
 
-//Index page (static HTML)
+
 app.route("/").get(function (req, res) {
   res.sendFile(process.cwd() + "/public/index.html");
 });
 
-/*************************************************/
-// Express server listening...
+
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });

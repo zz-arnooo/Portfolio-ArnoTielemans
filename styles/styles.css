@@ -618,7 +618,7 @@ section {
 }
 
 .portfolios .portfolio-item img {
-  width: 80%;
+  width: 65%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -627,7 +627,7 @@ section {
 
 .portfolios .portfolio-item .hover-items {
 
-   width: 80%;
+   width: 65%;
   
    height: 100%;
   
@@ -828,11 +828,9 @@ section {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .contact-content-con .left-contact .contact-info .contact-item p {
-  margin: .3rem 0 !important;
   padding: 0 !important;
 }
 
